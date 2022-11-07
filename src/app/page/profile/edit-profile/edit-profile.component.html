@@ -1,0 +1,27 @@
+<h2 class="text-center">Edit Profle</h2>
+
+<div class="form-group">
+  <input
+    class="form-control mt-4"
+    type="text"
+    placeholder="nickname"
+    [(ngModel)]="nickname"
+  />
+</div>
+<div class="form-group">
+  <input
+    class="form-control mt-4"
+    type="email"
+    placeholder="email"
+    [(ngModel)]="email"
+  />
+</div>
+
+<div class="button mt-4 text-end">
+  <button class="btn btn-danger" type="button" (click)="dialogRef.close(false)">
+    Cancle
+  </button>
+  <button class="btn btn-success mx-2" type="submit" (click)="onSubmit()">
+    Update
+  </button>
+</div>

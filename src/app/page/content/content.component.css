@@ -1,0 +1,11 @@
+.action a{
+    margin: 0 10px;
+}
+.add{
+    background-color:#0EE21B;
+    color: aliceblue;
+}
+.edit{
+    background-color:#DFD80B;
+    color: aliceblue;
+}

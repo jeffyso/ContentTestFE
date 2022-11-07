@@ -1,0 +1,66 @@
+<header class="p-3 bg-dark text-white">
+  <div class="container">
+    <div
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+    >
+      <div class="menubar">
+        <div class="menu">
+          <a
+            mat-button="basic"
+            routerLink=""
+            routerLinkActive="active2"
+            class="nav-link px-2"
+            >Home</a
+          >
+          <a
+            mat-button="basic"
+            routerLink="/contents"
+            routerLinkActive="active2"
+            class="nav-link px-2"
+            >Contents</a
+          >
+          <a
+            mat-button="basic"
+            routerLink="/profile"
+            routerLinkActive="active2"
+            class="nav-link px-2"
+            *ngIf="login"
+            >Profile</a
+          >
+        </div>
+        <div>
+          <div class="text-end" *ngIf="!login">
+            <button
+              type="button"
+              routerLink="/login"
+              routerLinkActive="active"
+              class="btn btn-outline-light me-2"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              routerLink="/register"
+              routerLinkActive="active"
+              class="btn btn-warning"
+            >
+              Sign-up
+            </button>
+          </div>
+
+          <div class="text-end" *ngIf="login">
+            <button
+              type="button"
+              routerLink="/login"
+              routerLinkActive="active"
+              class="btn btn-outline-light me-2"
+              (click)="logOut()"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

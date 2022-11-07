@@ -1,0 +1,58 @@
+<div style="background-color: #eee; min-height: 100vh">
+  <div class="container pt-5">
+    <div class="row">
+      <h1 class="text-start col-10 col-md-11">
+        <span class="title">Contents</span>
+      </h1>
+      <a class="hover col-2 col-md-1" (click)="openAdd()">
+        <button class="btn btn-success" mat-raised-button>+Add</button>
+      </a>
+    </div>
+    <h1 class="text-center mt-5" *ngIf="contents.length == 0">No Contents</h1>
+    <table
+      class="table table-borderless table-responsive card-1 p-4"
+      *ngIf="contents.length > 0"
+    >
+      <thead>
+        <tr class="border-bottom">
+          <th class="text-center">
+            <span>#</span>
+          </th>
+          <th class="text-start">
+            <span class="ms-2">Title</span>
+          </th>
+          <th class="text-center">
+            <span class="ml-4">Action</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-bottom" *ngFor="let c of contents; let i = index">
+          <td class="text-center">
+            <div class="p-2">
+              <span class="d-block font-weight-bold">{{ i + 1 }}</span>
+            </div>
+          </td>
+          <td class="text-start">
+            <div class="p-2">
+              <span class="font-weight-bold">{{ c.title }}</span>
+            </div>
+          </td>
+          <td class="text-center">
+            <div class="p-2 action">
+              <a class="hover" (click)="openDetail(c)">
+                <button mat-stroked-button color="primary">Detail</button>
+              </a>
+              <a class="hover" (click)="openEdit(c)">
+                <button mat-stroked-button color="accent">Edit</button>
+              </a>
+              <a class="hover" (click)="onDelete(c.id)">
+                <button mat-stroked-button color="warn">Delete</button>
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

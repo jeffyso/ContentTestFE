@@ -1,0 +1,27 @@
+.button{
+    display: flex;
+    justify-content:space-between ;
+    margin-right: 25px;
+    margin-left: 25px;
+    
+    align-items: flex-end;
+}
+.card{
+    margin-top: 20px;
+    width: 500px;
+}
+.form-control{
+    width: 450px ;
+    margin: 0 auto ;
+}
+.form-label{
+    width: 450px !important;
+    margin: 0 auto !important ;
+    margin-top: 1rem !important;
+    padding-left: 24px !important;
+}
+.content{
+    margin-top: 20px;
+    display: flex ;
+    justify-content: center ;
+}

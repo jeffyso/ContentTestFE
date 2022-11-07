@@ -1,0 +1,49 @@
+<div class="content">
+  <div class="card mt-2">
+    <h2 class="text-center mt-2">Sign-up</h2>
+
+    <!-- label -->
+    <div class="form-group">
+      <input
+        class="form-control"
+        type=""
+        placeholder="username"
+        [(ngModel)]="username"
+      />
+    </div>
+
+    <div class="form-group">
+      <input
+        class="form-control mt-3"
+        type="text"
+        placeholder="nickname"
+        [(ngModel)]="nickname"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control mt-3"
+        type="email"
+        placeholder="email"
+        [(ngModel)]="email"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control mt-3"
+        type="password"
+        placeholder="password"
+        [(ngModel)]="password"
+      />
+    </div>
+
+    <div class="button my-3">
+      <span>
+        <a routerLink="/login" class="hover" style="cursor: pointer"> Login</a>
+      </span>
+      <button class="btn btn-success" type="submit" (click)="onSubmit()">
+        Register
+      </button>
+    </div>
+  </div>
+</div>

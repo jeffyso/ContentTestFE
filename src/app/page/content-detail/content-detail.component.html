@@ -1,0 +1,18 @@
+<a class="hover" style="float: right">
+  <i (click)="dialogRef.close(_isUpdate)" class="far fa-times-circle fa-2x"></i>
+</a>
+<h2 mat-dialog-title>{{ content.title }}</h2>
+
+<mat-dialog-content class="mat-typography">
+  <div [innerHTML]="content.content"></div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button
+    type="button"
+    class="btn btn-danger me-2"
+    (click)="dialogRef.close(false)"
+  >
+    Cancel
+  </button>
+  <button class="btn btn-danger" (click)="openEdit()">Edit</button>
+</mat-dialog-actions>
